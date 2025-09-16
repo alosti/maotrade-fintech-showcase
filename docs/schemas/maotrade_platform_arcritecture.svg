@@ -1,0 +1,163 @@
+<svg width="1400" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="4" markerHeight="3" refX="3.5" refY="1.5" orient="auto">
+      <polygon points="0 0, 4 1.5, 0 3" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="4" markerHeight="3" refX="3.5" refY="1.5" orient="auto">
+      <polygon points="0 0, 4 1.5, 0 3" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="4" markerHeight="3" refX="3.5" refY="1.5" orient="auto">
+      <polygon points="0 0, 4 1.5, 0 3" fill="#27ae60"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="1400" height="1000" fill="#f1f5f9"/>
+  
+  <!-- Server boundary -->
+  <rect x="30" y="30" width="1340" height="940" fill="none" stroke="#2c3e50" stroke-width="3" stroke-dasharray="15,5" rx="15"/>
+  <text x="50" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">SINGLE SERVER - Security: SSH + Google Auth + iptables + Fail2ban</text>
+  
+  <!-- EXTERNAL BROKERS (top right) -->
+  <rect x="1100" y="80" width="220" height="100" fill="#27ae60" stroke="#1e8449" stroke-width="3" rx="8"/>
+  <text x="1210" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">BROKER APIs</text>
+  <text x="1210" y="135" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle">IG Trading - Interactive Brokers</text>
+  <text x="1210" y="155" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle">Real-time Market Data</text>
+  <text x="1210" y="170" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle">Order Management</text>
+  
+  <!-- FRONTEND LAYER (top left) -->
+  <rect x="80" y="80" width="180" height="120" fill="#3498db" stroke="#2980b9" stroke-width="3" rx="8"/>
+  <text x="170" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">MAOTrace</text>
+  <text x="170" y="135" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Android app</text>
+  <text x="170" y="155" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Trading Client</text>
+  <text x="170" y="175" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Portfolio Management</text>
+  <text x="170" y="190" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Charts and Analysis</text>
+  
+  <rect x="300" y="80" width="180" height="120" fill="#3498db" stroke="#2980b9" stroke-width="3" rx="8"/>
+  <text x="390" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">MAOAdmin</text>
+  <text x="390" y="135" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Vue3 + PWA</text>
+  <text x="390" y="155" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Admin Interface</text>
+  <text x="390" y="175" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">System Configuration</text>
+  <text x="390" y="190" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">User Management</text>
+  
+  <!-- API GATEWAY (center) -->
+  <rect x="550" y="300" width="250" height="100" fill="#e74c3c" stroke="#c0392b" stroke-width="4" rx="8"/>
+  <text x="675" y="330" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">MAOApi</text>
+  <text x="675" y="355" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Python FastAPI</text>
+  <text x="675" y="375" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">CENTRAL HUB</text>
+  <text x="675" y="390" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Push Notifications</text>
+  
+ 
+  <!-- CORE SERVICES LAYER -->
+  <rect x="80" y="580" width="160" height="100" fill="#f39c12" stroke="#e67e22" stroke-width="3" rx="8"/>
+  <text x="160" y="610" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">MAOData</text>
+  <text x="160" y="635" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Python Scheduler</text>
+  <text x="160" y="655" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Studies and Charts</text>
+  <text x="160" y="670" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Custom Indicators</text>
+  
+  <rect x="480" y="580" width="160" height="100" fill="#f39c12" stroke="#e67e22" stroke-width="3" rx="8"/>
+  <text x="560" y="610" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Nagios</text>
+  <text x="560" y="635" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">System Monitor</text>
+  <text x="560" y="655" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Health Checks</text>
+  <text x="560" y="670" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Email Alerts</text>
+  
+  <!-- DOCKER INFRASTRUCTURE -->
+  <rect x="750" y="560" width="280" height="210" fill="rgba(33, 150, 243, 0.1)" stroke="#2196f3" stroke-width="3" stroke-dasharray="10,5" rx="10"/>
+  <text x="870" y="550" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2196f3" text-anchor="middle">Docker Infrastructure</text>
+  
+  <rect x="770" y="590" width="240" height="30" fill="#2196f3" stroke="#1976d2" stroke-width="2" rx="5"/>
+  <text x="890" y="612" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">MAOTrade Container 1 (Account A)</text>
+  
+  <rect x="770" y="635" width="240" height="30" fill="#2196f3" stroke="#1976d2" stroke-width="2" rx="5"/>
+  <text x="890" y="657" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">MAOTrade Container 2 (Account B)</text>
+  
+  <rect x="770" y="680" width="240" height="30" fill="#2196f3" stroke="#1976d2" stroke-width="2" rx="5"/>
+  <text x="890" y="702" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">MAOTrade Container N (Account N)</text>
+  
+  <rect x="770" y="725" width="240" height="25" fill="#1976d2" stroke="#0d47a1" stroke-width="2" rx="5"/>
+  <text x="890" y="743" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">MySQL Trading Container (Isolated Network)</text>
+  
+  <!-- MAOTRADE COMPONENTS -->
+  <rect x="1100" y="560" width="250" height="180" fill="rgba(156, 39, 176, 0.1)" stroke="#9c27b0" stroke-width="3" rx="10"/>
+  <text x="1225" y="760" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#9c27b0" text-anchor="middle">MAOTrade Components</text>
+  <text x="1225" y="578" font-family="Arial, sans-serif" font-size="12" fill="#9c27b0" text-anchor="middle">(Inside each container)</text>
+  
+  <rect x="1120" y="590" width="210" height="35" fill="#9c27b0" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+  <text x="1225" y="615" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">Trading Engine</text>
+  
+  <rect x="1120" y="640" width="210" height="35" fill="#9c27b0" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+  <text x="1225" y="665" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">Client Request Handler</text>
+  
+  <rect x="1120" y="690" width="210" height="35" fill="#9c27b0" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+  <text x="1225" y="715" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">Broker API Manager</text>
+  
+  <!-- DATABASE LAYER (bottom) -->
+  <rect x="150" y="800" width="200" height="120" fill="#8e44ad" stroke="#7d3c98" stroke-width="3" rx="8"/>
+  <text x="250" y="830" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">MySQL Main</text>
+  <text x="250" y="855" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Platform Configuration</text>
+  <text x="250" y="875" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">User Accounts</text>
+  <text x="250" y="895" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">API ACCESS ONLY</text>
+  <text x="250" y="910" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Trading System Config</text>
+  
+  <rect x="400" y="800" width="200" height="120" fill="#8e44ad" stroke="#7d3c98" stroke-width="3" rx="8"/>
+  <text x="500" y="830" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">MongoDB</text>
+  <text x="500" y="855" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Centralized Logs</text>
+  <text x="500" y="875" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Fluentd Aggregation</text>
+  <text x="500" y="895" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">All Components</text>
+  <text x="500" y="910" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">System Monitoring</text>
+  
+  <rect x="650" y="800" width="200" height="120" fill="#8e44ad" stroke="#7d3c98" stroke-width="3" rx="8"/>
+  <text x="750" y="830" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">MySQL Trading</text>
+  <text x="750" y="855" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Signals and Orders</text>
+  <text x="750" y="875" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Per Container Schema</text>
+  <text x="750" y="895" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Isolated Network</text>
+  <text x="750" y="910" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Trading History</text>
+  
+  <!-- CONNECTIONS -->
+  
+  <!-- Frontend to MAOApi -->
+  <line x1="170" y1="200" x2="620" y2="300" stroke="#2c3e50" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="390" y1="200" x2="720" y2="300" stroke="#2c3e50" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="362" y="238" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold">REST API Calls</text>
+  
+  <!-- Components to MAOApi (corrected direction) -->
+  <line x1="160" y1="580" x2="600" y2="400" stroke="#e74c3c" stroke-width="4" marker-end="url(#arrow-red)"/>
+  <line x1="360" y1="580" x2="650" y2="400" stroke="#e74c3c" stroke-width="4" marker-end="url(#arrow-red)"/>
+  <line x1="560" y1="580" x2="700" y2="400" stroke="#e74c3c" stroke-width="4" marker-end="url(#arrow-red)"/>
+  <!-- MAOApi to MAOTrade Components (bidirectional) -->
+  <line x1="800" y1="380" x2="1100" y2="660" stroke="#e74c3c" stroke-width="4" marker-end="url(#arrow-red)"/>
+
+  <!-- MAOTrade Components to MAOApi (corrected direction and length) -->
+  <line x1="1100" y1="660" x2="800" y2="380" stroke="#e74c3c" stroke-width="4" marker-end="url(#arrow-red)"/>
+  <text x="840" y="350" font-family="Arial, sans-serif" font-size="16" fill="#e74c3c" font-weight="bold">All Components → MAOApi</text>
+  
+  <!-- MAOPods manages Docker - UPDATED POSITIONS -->
+  <line x1="440" y1="630" x2="750" y2="660" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="620" y="640" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" font-weight="bold">Docker Management</text>
+  
+  <!-- Docker hosts MAOTrade - UPDATED POSITIONS -->
+  <line x1="1030" y1="660" x2="1100" y2="660" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="1040" y="650" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50" font-weight="bold">hosts</text>
+  
+  <!-- ONLY MAOTrade Components to Brokers - UPDATED POSITION -->
+  <line x1="1225" y1="560" x2="1210" y2="180" stroke="#27ae60" stroke-width="5" marker-end="url(#arrow-green)"/>
+  <text x="1240" y="370" font-family="Arial, sans-serif" font-size="14" fill="#27ae60" font-weight="bold">ONLY MAOTrade</text>
+  <text x="1240" y="390" font-family="Arial, sans-serif" font-size="14" fill="#27ae60" font-weight="bold">talks to Brokers</text>
+  
+  <!-- Database connections - UPDATED POSITIONS -->
+  <line x1="620" y1="400" x2="250" y2="800" stroke="#8e44ad" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="315" y="750" font-family="Arial, sans-serif" font-size="12" fill="#8e44ad" font-weight="bold">Config Data (API Only)</text>
+  
+  <text x="409" y="790" font-family="Arial, sans-serif" font-size="12" fill="#8e44ad" font-weight="bold">All components log via Fluentd</text>
+  
+  <line x1="890" y1="750" x2="750" y2="800" stroke="#8e44ad" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="820" y="790" font-family="Arial, sans-serif" font-size="12" fill="#8e44ad" font-weight="bold">Trading Data</text>
+  
+  <!-- MAOPods -->
+  <rect x="280" y="580" width="160" height="100" fill="#f39c12" stroke="#e67e22" stroke-width="3" rx="8"/>
+  <text x="360" y="610" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">MAOPods</text>
+  <text x="360" y="635" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Python</text>
+  <text x="360" y="655" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Docker API</text>
+  <text x="360" y="670" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Container Orchestration</text>
+  
+</svg>

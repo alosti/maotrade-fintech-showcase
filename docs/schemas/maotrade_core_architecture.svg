@@ -1,0 +1,104 @@
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">MAOTrade Architecture</text>
+  
+  <!-- MAOApi Layer -->
+  <rect x="100" y="60" width="1000" height="80" fill="#e8f4fd" stroke="#3498db" stroke-width="2" rx="5"/>
+  <text x="600" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">MAOApi (REST Services)</text>
+  <text x="600" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Web Interface, Mobile Apps, External Systems</text>
+  <text x="600" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Configuration, Summary, Historical Data</text>
+  
+  <!-- MAOTrade Container -->
+  <rect x="150" y="200" width="900" height="500" fill="#fff" stroke="#2c3e50" stroke-width="3" rx="8" stroke-dasharray="10,5"/>
+  <text x="600" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">MAOTrade (Docker Container)</text>
+  
+  <!-- ClientMgr -->
+  <rect x="200" y="280" width="180" height="80" fill="#f39c12" stroke="#e67e22" stroke-width="2" rx="5"/>
+  <text x="290" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">ClientMgr</text>
+  <text x="290" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">TCP Server</text>
+  <text x="290" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Internal Communication</text>
+  
+  <!-- TradeMgr -->
+  <rect x="510" y="280" width="180" height="80" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+  <text x="600" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">TradeMgr</text>
+  <text x="600" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Trading Logic</text>
+  <text x="600" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">System Execution</text>
+  
+  <!-- ConfigHelper -->
+  <rect x="820" y="280" width="180" height="80" fill="#8e44ad" stroke="#7d3c98" stroke-width="2" rx="5"/>
+  <text x="910" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">ConfigHelper</text>
+  <text x="910" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Configuration</text>
+  <text x="910" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">DAO and Services</text>
+  
+  <!-- Trading Systems -->
+  <rect x="200" y="480" width="180" height="80" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+  <text x="290" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Trading Systems</text>
+  <text x="290" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">FUTC, FUTM, etc.</text>
+  <text x="290" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Strategy Logic</text>
+  
+  <!-- Gateway Layer -->
+  <rect x="510" y="480" width="180" height="80" fill="#34495e" stroke="#2c3e50" stroke-width="2" rx="5"/>
+  <text x="600" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Gateway Layer</text>
+  <text x="600" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">BaseAccountManager</text>
+  <text x="600" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Broker Abstraction</text>
+  
+  <!-- Database -->
+  <rect x="820" y="480" width="180" height="80" fill="#95a5a6" stroke="#7f8c8d" stroke-width="2" rx="5"/>
+  <text x="910" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">MySQL Database</text>
+  <text x="910" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Orders, Signals</text>
+  <text x="910" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Real-time Data</text>
+  
+  <!-- IG Trading -->
+  <rect x="450" y="750" width="300" height="60" fill="#ff6b6b" stroke="#ee5a52" stroke-width="2" rx="5"/>
+  <text x="600" y="775" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">IG Trading (IGAccountManager)</text>
+  <text x="600" y="795" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">REST APIs + LightStreamer Feed</text>
+  
+  <!-- Communication Lines -->
+  
+  <!-- MAOApi to ClientMgr -->
+  <line x1="290" y1="140" x2="290" y2="280" stroke="#3498db" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="305" y="210" font-family="Arial, sans-serif" font-size="10" fill="#3498db">TCP</text>
+  
+  <!-- ClientMgr to TradeMgr -->
+  <line x1="380" y1="320" x2="510" y2="320" stroke="#f39c12" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="510" y1="340" x2="380" y2="340" stroke="#27ae60" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="445" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">Queue</text>
+  
+  <!-- TradeMgr to Trading Systems -->
+  <line x1="510" y1="360" x2="380" y2="480" stroke="#27ae60" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="380" y1="500" x2="510" y2="380" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- TradeMgr to Gateway -->
+  <line x1="600" y1="360" x2="600" y2="480" stroke="#27ae60" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="620" y1="480" x2="620" y2="360" stroke="#34495e" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- TradeMgr to ConfigHelper -->
+  <line x1="690" y1="320" x2="820" y2="320" stroke="#27ae60" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="755" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">Config</text>
+  
+  <!-- ConfigHelper to Database -->
+  <line x1="910" y1="360" x2="910" y2="480" stroke="#8e44ad" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="925" y="420" font-family="Arial, sans-serif" font-size="9" fill="#8e44ad">DAO</text>
+  
+  <!-- Gateway to IG -->
+  <line x1="600" y1="560" x2="600" y2="750" stroke="#34495e" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="580" y1="750" x2="580" y2="560" stroke="#ff6b6b" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="530" y="655" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Orders</text>
+  <text x="630" y="655" font-family="Arial, sans-serif" font-size="9" fill="#ff6b6b">Market Data</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="4.5" refY="1.75" orient="auto">
+      <polygon points="0 0, 5 1.75, 0 3.5" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  
+  <!-- Legend -->
+  <rect x="100" y="840" width="1000" height="50" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1" rx="3"/>
+  <text x="120" y="860" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Legend:</text>
+  <text x="120" y="875" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">• MAOApi: External REST interface for web/mobile clients</text>
+  <text x="620" y="875" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">• MAOTrade: Core trading engine in Docker container</text>
+</svg>
